@@ -7,7 +7,7 @@ export class SwaggerStartup {
     const config = new DocumentBuilder()
       .setTitle('Tech Challenge - Backend')
       .setExternalDoc('Exportar documentação', '/swagger-json')
-      .setDescription('Sistema de gestão de pedidos')
+      .setDescription('Sistema de gestão de cardapios')
       .addBearerAuth()
       .setVersion(VERSION);
 
