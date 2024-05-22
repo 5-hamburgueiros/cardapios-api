@@ -9,6 +9,16 @@ import { environment } from './environment';
 export class TypeORMConfig implements IConfig<TypeOrmModuleOptions> {
   public readonly name: string = 'typeorm';
   get(): TypeOrmModuleOptions {
+    if (environment.isTest()) {
+      return {
+        type: 'sqlite',
+        database: ':memory:',
+        dropSchema: true,
+        entities: typeOrmEntities,
+        synchronize: true,
+      };
+    }
+
     const config: TypeOrmModuleOptions = {
       type: 'postgres',
       host: process.env.DATABASE_HOST,
