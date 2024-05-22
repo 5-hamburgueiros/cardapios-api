@@ -6,21 +6,7 @@ on:
       - main
 
 jobs:
-  build_docker_image:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Build Docker Image
-        run: docker build -t cardapios-api .
-
   sonar_cloud_scan:
-    needs: build_docker_image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,9 +15,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
-      - name: Start docker
-        run: docker compose up -d
 
       - name: Run tests
         run: yarn test:acceptance && yarn test:ci
