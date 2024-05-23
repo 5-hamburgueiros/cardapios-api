@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  EKS_CLUSTER_NAME: fiap-cluster
+  EKS_CLUSTER_NAME: tech-challenge-cluster
   AWS_REGION: us-east-1
   ECR_REPOSITORY: cardapios-api
 
