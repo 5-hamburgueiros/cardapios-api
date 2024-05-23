@@ -58,7 +58,7 @@ export class IngredienteController {
   async index(
     @Query('nome') nome: string,
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page = 1,
-    @Query('limit', new DefaultValuePipe(1), ParseIntPipe) limit = 1,
+    @Query('limit', new DefaultValuePipe(5), ParseIntPipe) limit = 5,
   ): Promise<Pagination<IngredienteModelTypeOrm>> {
     limit = limit > 100 ? 100 : limit;
     return this._ingredienteService.paginate(
