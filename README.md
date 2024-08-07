@@ -64,5 +64,5 @@ E se estiver utilizando o ambiente de desenvolvimento via `yarn`, basta acessar 
 Executamos o OWASP ZAP nos nossos 3 endpoints /itens, /combos e /ingredientes que juntos compoem nosso cardápio.
 
 Logo na primeira execução não foi encontrado nenhuma vulnerabilidade conforme relatório abaixo.
-![Relatório OWASP ZAP HTML](./out/docs/2024-06-11-ZAP-Report-localhost.html)
-![Relatório OWASP ZAP PDF](./out/docs/2024-06-11-ZAP-Report-localhost.pdf)
+- [Relatório OWASP ZAP HTML](./out/docs/2024-06-11-ZAP-Report-localhost.html)
+- [Relatório OWASP ZAP PDF](./out/docs/2024-06-11-ZAP-Report-localhost.pdf)
