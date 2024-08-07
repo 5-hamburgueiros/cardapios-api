@@ -59,3 +59,10 @@ Já se estiver utilizando Docker, pode acessar em http://localhost:3333/swagger 
 
 E se estiver utilizando o ambiente de desenvolvimento via `yarn`, basta acessar em http://localhost:3000/swagger e http://localhost:3000/swagger-json .
 
+
+## OWASP ZAP
+Executamos o OWASP ZAP nos nossos 3 endpoints /itens, /combos e /ingredientes que juntos compoem nosso cardápio.
+
+Logo na primeira execução não foi encontrado nenhuma vulnerabilidade conforme relatório abaixo.
+![Relatório OWASP ZAP HTML](./out/docs/2024-06-11-ZAP-Report-localhost.html)
+![Relatório OWASP ZAP PDF](./out/docs/2024-06-11-ZAP-Report-localhost.pdf)
